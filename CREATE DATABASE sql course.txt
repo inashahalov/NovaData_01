@@ -1,0 +1,26 @@
+CREATE DATABASE sql_course;
+CREATE SCHEMA test;
+CREATE TABLE test.example (
+
+name text,
+
+birthday date
+
+);
+CREATE TABLE test.example2 (
+id serial4 PRIMARY key,
+name varchar(50) NOT NULL,
+birthday date NULL,
+phone varchar(16) UNIQUE
+);
+IF EXISTS (если существует) / IF NOT EXISTS (если не существует)
+CREATE TABLE IF NOT EXISTS test.example2 (...
+TRUNCATE TABLE test.example;
+DROP TABLE test.example3;
+DROP TABLE IF EXISTS test.example3;
+Преобразуем text в varchar(50):
+ALTER TABLE test.example ALTER COLUMN "name" TYPE varchar(50) USING "name"::varchar(50);
+Создадим индекс UNIQUE для поля phone:
+CREATE UNIQUE INDEX example_phone_idx ON test.example (phone);
+Объявим id первичным ключом:
+ALTER TABLE test.example ADD PRIMARY KEY (id);
