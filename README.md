@@ -1,7 +1,7 @@
 # Data Pipeline: PostgreSQL → Kafka → ClickHouse
 
 ## Описание
-**5.2 Задание. Kafka против дубликатов**.
+**5 Задание. Kafka против дубликатов**.
 
 Этот пайплайн переносит события из PostgreSQL в ClickHouse через Apache Kafka, обеспечивая защиту от дублирования данных.
 
